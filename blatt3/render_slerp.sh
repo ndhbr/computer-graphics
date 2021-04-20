@@ -1,0 +1,1 @@
+asy -f png -render 8 slerp.asy
