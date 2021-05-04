@@ -5,7 +5,7 @@ CXXFLAGS = -ggdb3 -O0
 # CXXFLAGS = -O3
 
 renderpipeline: $(SOURCES) $(HEADERS)
-	g++ $(CXXFLAGS) -std=c++14 $(SOURCES) -lpng -o $@
+	g++ $(CXXFLAGS) -std=c++14 $(SOURCES) -lpng -largp -o $@
 
 .PHONY: dist clean
 
