@@ -1,922 +1,767 @@
-mesh.o: mesh.cpp \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iosfwd \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/wchar.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wchar.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_posix_availability.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_types.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/_types.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_types.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_null.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_size_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mbstate_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/types.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/types.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int8_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int16_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int32_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int8_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int16_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int32_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int64_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_intptr_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uintptr_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ct_rune_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/stdarg.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_va_list.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_off_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ssize_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_clock_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_time_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timespec.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_wctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wint_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_wctype_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/runetype.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bit_reference \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bit \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/limits \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstddef \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__cxx_version \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/stddef.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/__stddef_max_align_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__nullptr \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__undef_macros \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__debug \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/algorithm \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/initializer_list \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstring \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/string.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rsize_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_errno_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/strings.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/utility \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tuple \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdint \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stdint.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/stdint.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdint.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint8_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint16_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint32_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint64_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_intmax_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uintmax_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/typeinfo \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/exception \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdlib \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stdlib.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/wait.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_pid_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_id_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/signal.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/appleapiopts.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/signal.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/signal.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_mcontext.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/_mcontext.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/machine/_structs.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/i386/_structs.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_attr_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigaltstack.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ucontext.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uid_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/resource.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timeval.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/endian.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/endian.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_endian.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/_OSByteOrder.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/i386/_OSByteOrder.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/alloca.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/math.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/math.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/new \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__functional_base \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/tuple \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stdexcept \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/atomic \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cassert \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/functional \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/climits \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/limits.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/_limits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__split_buffer \
-  /usr/local/include/glm/glm.hpp \
-  /usr/local/include/glm/detail/_fixes.hpp \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cmath \
-  /usr/local/include/glm/detail/setup.hpp \
-  /usr/local/include/glm/detail/../simd/platform.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cfloat \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/float.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/float.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/float.h \
-  /usr/local/include/glm/fwd.hpp \
-  /usr/local/include/glm/detail/qualifier.hpp \
-  /usr/local/include/glm/vec2.hpp \
-  /usr/local/include/glm/./ext/vector_bool2.hpp \
-  /usr/local/include/glm/./ext/../detail/type_vec2.hpp \
-  /usr/local/include/glm/detail/type_vec2.inl \
-  /usr/local/include/glm/detail/./compute_vector_relational.hpp \
-  /usr/local/include/glm/./ext/vector_bool2_precision.hpp \
-  /usr/local/include/glm/./ext/vector_float2.hpp \
-  /usr/local/include/glm/./ext/vector_float2_precision.hpp \
-  /usr/local/include/glm/./ext/vector_double2.hpp \
-  /usr/local/include/glm/./ext/vector_double2_precision.hpp \
-  /usr/local/include/glm/./ext/vector_int2.hpp \
-  /usr/local/include/glm/./ext/vector_int2_sized.hpp \
-  /usr/local/include/glm/./ext/../ext/vector_int2.hpp \
-  /usr/local/include/glm/./ext/../ext/scalar_int_sized.hpp \
-  /usr/local/include/glm/./ext/../detail/setup.hpp \
-  /usr/local/include/glm/./ext/vector_uint2.hpp \
-  /usr/local/include/glm/./ext/vector_uint2_sized.hpp \
-  /usr/local/include/glm/./ext/../ext/vector_uint2.hpp \
-  /usr/local/include/glm/./ext/../ext/scalar_uint_sized.hpp \
-  /usr/local/include/glm/vec3.hpp \
-  /usr/local/include/glm/./ext/vector_bool3.hpp \
-  /usr/local/include/glm/./ext/../detail/type_vec3.hpp \
-  /usr/local/include/glm/detail/type_vec3.inl \
-  /usr/local/include/glm/detail/compute_vector_relational.hpp \
-  /usr/local/include/glm/./ext/vector_bool3_precision.hpp \
-  /usr/local/include/glm/./ext/vector_float3.hpp \
-  /usr/local/include/glm/./ext/vector_float3_precision.hpp \
-  /usr/local/include/glm/./ext/vector_double3.hpp \
-  /usr/local/include/glm/./ext/vector_double3_precision.hpp \
-  /usr/local/include/glm/./ext/vector_int3.hpp \
-  /usr/local/include/glm/./ext/vector_int3_sized.hpp \
-  /usr/local/include/glm/./ext/../ext/vector_int3.hpp \
-  /usr/local/include/glm/./ext/vector_uint3.hpp \
-  /usr/local/include/glm/./ext/vector_uint3_sized.hpp \
-  /usr/local/include/glm/./ext/../ext/vector_uint3.hpp \
-  /usr/local/include/glm/vec4.hpp \
-  /usr/local/include/glm/./ext/vector_bool4.hpp \
-  /usr/local/include/glm/./ext/../detail/type_vec4.hpp \
-  /usr/local/include/glm/detail/type_vec4.inl \
-  /usr/local/include/glm/./ext/vector_bool4_precision.hpp \
-  /usr/local/include/glm/./ext/vector_float4.hpp \
-  /usr/local/include/glm/./ext/vector_float4_precision.hpp \
-  /usr/local/include/glm/./ext/vector_double4.hpp \
-  /usr/local/include/glm/./ext/vector_double4_precision.hpp \
-  /usr/local/include/glm/./ext/vector_int4.hpp \
-  /usr/local/include/glm/./ext/vector_int4_sized.hpp \
-  /usr/local/include/glm/./ext/../ext/vector_int4.hpp \
-  /usr/local/include/glm/./ext/vector_uint4.hpp \
-  /usr/local/include/glm/./ext/vector_uint4_sized.hpp \
-  /usr/local/include/glm/./ext/../ext/vector_uint4.hpp \
-  /usr/local/include/glm/mat2x2.hpp \
-  /usr/local/include/glm/./ext/matrix_double2x2.hpp \
-  /usr/local/include/glm/./ext/../detail/type_mat2x2.hpp \
-  /usr/local/include/glm/detail/type_vec2.hpp \
-  /usr/local/include/glm/detail/type_mat2x2.inl \
-  /usr/local/include/glm/detail/../matrix.hpp \
-  /usr/local/include/glm/mat2x3.hpp \
-  /usr/local/include/glm/./ext/matrix_double2x3.hpp \
-  /usr/local/include/glm/./ext/../detail/type_mat2x3.hpp \
-  /usr/local/include/glm/detail/type_vec3.hpp \
-  /usr/local/include/glm/detail/type_mat2x3.inl \
-  /usr/local/include/glm/./ext/matrix_double2x3_precision.hpp \
-  /usr/local/include/glm/./ext/matrix_float2x3.hpp \
-  /usr/local/include/glm/./ext/matrix_float2x3_precision.hpp \
-  /usr/local/include/glm/mat2x4.hpp \
-  /usr/local/include/glm/./ext/matrix_double2x4.hpp \
-  /usr/local/include/glm/./ext/../detail/type_mat2x4.hpp \
-  /usr/local/include/glm/detail/type_vec4.hpp \
-  /usr/local/include/glm/detail/type_mat2x4.inl \
-  /usr/local/include/glm/./ext/matrix_double2x4_precision.hpp \
-  /usr/local/include/glm/./ext/matrix_float2x4.hpp \
-  /usr/local/include/glm/./ext/matrix_float2x4_precision.hpp \
-  /usr/local/include/glm/mat3x2.hpp \
-  /usr/local/include/glm/./ext/matrix_double3x2.hpp \
-  /usr/local/include/glm/./ext/../detail/type_mat3x2.hpp \
-  /usr/local/include/glm/detail/type_mat3x2.inl \
-  /usr/local/include/glm/./ext/matrix_double3x2_precision.hpp \
-  /usr/local/include/glm/./ext/matrix_float3x2.hpp \
-  /usr/local/include/glm/./ext/matrix_float3x2_precision.hpp \
-  /usr/local/include/glm/mat3x3.hpp \
-  /usr/local/include/glm/./ext/matrix_double3x3.hpp \
-  /usr/local/include/glm/./ext/../detail/type_mat3x3.hpp \
-  /usr/local/include/glm/detail/type_mat3x3.inl \
-  /usr/local/include/glm/./ext/matrix_double3x3_precision.hpp \
-  /usr/local/include/glm/./ext/matrix_float3x3.hpp \
-  /usr/local/include/glm/./ext/matrix_float3x3_precision.hpp \
-  /usr/local/include/glm/mat3x4.hpp \
-  /usr/local/include/glm/./ext/matrix_double3x4.hpp \
-  /usr/local/include/glm/./ext/../detail/type_mat3x4.hpp \
-  /usr/local/include/glm/detail/type_mat3x4.inl \
-  /usr/local/include/glm/./ext/matrix_double3x4_precision.hpp \
-  /usr/local/include/glm/./ext/matrix_float3x4.hpp \
-  /usr/local/include/glm/./ext/matrix_float3x4_precision.hpp \
-  /usr/local/include/glm/mat4x2.hpp \
-  /usr/local/include/glm/./ext/matrix_double4x2.hpp \
-  /usr/local/include/glm/./ext/../detail/type_mat4x2.hpp \
-  /usr/local/include/glm/detail/type_mat4x2.inl \
-  /usr/local/include/glm/./ext/matrix_double4x2_precision.hpp \
-  /usr/local/include/glm/./ext/matrix_float4x2.hpp \
-  /usr/local/include/glm/./ext/matrix_float4x2_precision.hpp \
-  /usr/local/include/glm/mat4x3.hpp \
-  /usr/local/include/glm/./ext/matrix_double4x3.hpp \
-  /usr/local/include/glm/./ext/../detail/type_mat4x3.hpp \
-  /usr/local/include/glm/detail/type_mat4x3.inl \
-  /usr/local/include/glm/./ext/matrix_double4x3_precision.hpp \
-  /usr/local/include/glm/./ext/matrix_float4x3.hpp \
-  /usr/local/include/glm/./ext/matrix_float4x3_precision.hpp \
-  /usr/local/include/glm/mat4x4.hpp \
-  /usr/local/include/glm/./ext/matrix_double4x4.hpp \
-  /usr/local/include/glm/./ext/../detail/type_mat4x4.hpp \
-  /usr/local/include/glm/detail/type_mat4x4.inl \
-  /usr/local/include/glm/./ext/matrix_double4x4_precision.hpp \
-  /usr/local/include/glm/./ext/matrix_float4x4.hpp \
-  /usr/local/include/glm/./ext/matrix_float4x4_precision.hpp \
-  /usr/local/include/glm/detail/func_matrix.inl \
-  /usr/local/include/glm/detail/../geometric.hpp \
-  /usr/local/include/glm/detail/func_geometric.inl \
-  /usr/local/include/glm/detail/../exponential.hpp \
-  /usr/local/include/glm/detail/type_vec1.hpp \
-  /usr/local/include/glm/detail/type_vec1.inl \
-  /usr/local/include/glm/detail/func_exponential.inl \
-  /usr/local/include/glm/detail/../vector_relational.hpp \
-  /usr/local/include/glm/detail/func_vector_relational.inl \
-  /usr/local/include/glm/detail/_vectorize.hpp \
-  /usr/local/include/glm/detail/../common.hpp \
-  /usr/local/include/glm/detail/func_common.inl \
-  /usr/local/include/glm/detail/compute_common.hpp \
-  /usr/local/include/glm/./ext/matrix_double2x2_precision.hpp \
-  /usr/local/include/glm/./ext/matrix_float2x2.hpp \
-  /usr/local/include/glm/./ext/matrix_float2x2_precision.hpp \
-  /usr/local/include/glm/trigonometric.hpp \
-  /usr/local/include/glm/detail/func_trigonometric.inl \
-  /usr/local/include/glm/exponential.hpp \
-  /usr/local/include/glm/common.hpp /usr/local/include/glm/packing.hpp \
-  /usr/local/include/glm/detail/func_packing.inl \
-  /usr/local/include/glm/detail/type_half.hpp \
-  /usr/local/include/glm/detail/type_half.inl \
-  /usr/local/include/glm/geometric.hpp /usr/local/include/glm/matrix.hpp \
-  /usr/local/include/glm/vector_relational.hpp \
-  /usr/local/include/glm/integer.hpp \
-  /usr/local/include/glm/detail/func_integer.inl \
-  /usr/local/include/glm/gtc/random.hpp \
-  /usr/local/include/glm/gtc/../ext/scalar_int_sized.hpp \
-  /usr/local/include/glm/gtc/../ext/scalar_uint_sized.hpp \
-  /usr/local/include/glm/gtc/../detail/qualifier.hpp \
-  /usr/local/include/glm/gtc/random.inl \
-  /usr/local/include/glm/gtc/../geometric.hpp \
-  /usr/local/include/glm/gtc/../exponential.hpp \
-  /usr/local/include/glm/gtc/../trigonometric.hpp \
-  /usr/local/include/glm/gtc/../detail/type_vec1.hpp \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ctime \
-  /usr/local/include/GL/glew.h /usr/local/include/OpenGL/glu.h \
-  /usr/local/include/OpenGL/OpenGLAvailability.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/os/availability.h \
-  /usr/local/include/OpenGL/gl.h
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iosfwd:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/wchar.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wchar.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_symbol_aliasing.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_posix_availability.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_types.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/_types.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_types.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_null.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_size_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mbstate_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/types.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/types.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int8_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int16_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int32_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int8_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int16_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int32_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int64_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_intptr_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uintptr_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ct_rune_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/stdarg.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stdio.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_va_list.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_off_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ssize_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_clock_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_time_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timespec.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_wctype.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wint_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_wctype_t.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ctype.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ctype.h:
+mesh.o: mesh.cpp /usr/include/stdc-predef.h /usr/include/c++/9/vector \
+ /usr/include/c++/9/bits/stl_algobase.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
+ /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/bits/long-double.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
+ /usr/include/c++/9/bits/functexcept.h \
+ /usr/include/c++/9/bits/exception_defines.h \
+ /usr/include/c++/9/bits/cpp_type_traits.h \
+ /usr/include/c++/9/ext/type_traits.h \
+ /usr/include/c++/9/ext/numeric_traits.h \
+ /usr/include/c++/9/bits/stl_pair.h /usr/include/c++/9/bits/move.h \
+ /usr/include/c++/9/bits/concept_check.h /usr/include/c++/9/type_traits \
+ /usr/include/c++/9/bits/stl_iterator_base_types.h \
+ /usr/include/c++/9/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/9/debug/assertions.h \
+ /usr/include/c++/9/bits/stl_iterator.h \
+ /usr/include/c++/9/bits/ptr_traits.h /usr/include/c++/9/debug/debug.h \
+ /usr/include/c++/9/bits/predefined_ops.h \
+ /usr/include/c++/9/bits/allocator.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
+ /usr/include/c++/9/ext/new_allocator.h /usr/include/c++/9/new \
+ /usr/include/c++/9/exception /usr/include/c++/9/bits/exception.h \
+ /usr/include/c++/9/bits/exception_ptr.h \
+ /usr/include/c++/9/bits/cxxabi_init_exception.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+ /usr/include/c++/9/typeinfo /usr/include/c++/9/bits/hash_bytes.h \
+ /usr/include/c++/9/bits/nested_exception.h \
+ /usr/include/c++/9/bits/memoryfwd.h \
+ /usr/include/c++/9/bits/stl_construct.h \
+ /usr/include/c++/9/ext/alloc_traits.h \
+ /usr/include/c++/9/bits/alloc_traits.h \
+ /usr/include/c++/9/bits/stl_uninitialized.h \
+ /usr/include/c++/9/bits/stl_vector.h /usr/include/c++/9/initializer_list \
+ /usr/include/c++/9/bits/stl_bvector.h \
+ /usr/include/c++/9/bits/functional_hash.h \
+ /usr/include/c++/9/bits/range_access.h \
+ /usr/include/c++/9/bits/vector.tcc /usr/include/glm/glm.hpp \
+ /usr/include/glm/detail/_fixes.hpp /usr/include/c++/9/cmath \
+ /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/timesize.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/time64.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+ /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+ /usr/include/x86_64-linux-gnu/bits/mathinline.h \
+ /usr/include/c++/9/bits/std_abs.h /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endianness.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+ /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+ /usr/include/glm/detail/setup.hpp /usr/include/c++/9/cassert \
+ /usr/include/assert.h /usr/include/c++/9/cstddef \
+ /usr/include/glm/simd/platform.h /usr/include/c++/9/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/c++/9/climits \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/9/cfloat \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
+ /usr/include/c++/9/limits /usr/include/glm/fwd.hpp \
+ /usr/include/glm/detail/qualifier.hpp /usr/include/glm/detail/setup.hpp \
+ /usr/include/glm/vec2.hpp /usr/include/glm/ext/vector_bool2.hpp \
+ /usr/include/glm/detail/type_vec2.hpp \
+ /usr/include/glm/detail/type_vec2.inl \
+ /usr/include/glm/detail/compute_vector_relational.hpp \
+ /usr/include/glm/ext/vector_bool2_precision.hpp \
+ /usr/include/glm/ext/vector_float2.hpp \
+ /usr/include/glm/ext/vector_float2_precision.hpp \
+ /usr/include/glm/ext/vector_double2.hpp \
+ /usr/include/glm/ext/vector_double2_precision.hpp \
+ /usr/include/glm/ext/vector_int2.hpp \
+ /usr/include/glm/ext/vector_int2_precision.hpp \
+ /usr/include/glm/ext/vector_uint2.hpp \
+ /usr/include/glm/ext/vector_uint2_precision.hpp \
+ /usr/include/glm/vec3.hpp /usr/include/glm/ext/vector_bool3.hpp \
+ /usr/include/glm/detail/type_vec3.hpp \
+ /usr/include/glm/detail/type_vec3.inl \
+ /usr/include/glm/ext/vector_bool3_precision.hpp \
+ /usr/include/glm/ext/vector_float3.hpp \
+ /usr/include/glm/ext/vector_float3_precision.hpp \
+ /usr/include/glm/ext/vector_double3.hpp \
+ /usr/include/glm/ext/vector_double3_precision.hpp \
+ /usr/include/glm/ext/vector_int3.hpp \
+ /usr/include/glm/ext/vector_int3_precision.hpp \
+ /usr/include/glm/ext/vector_uint3.hpp \
+ /usr/include/glm/ext/vector_uint3_precision.hpp \
+ /usr/include/glm/vec4.hpp /usr/include/glm/ext/vector_bool4.hpp \
+ /usr/include/glm/detail/type_vec4.hpp \
+ /usr/include/glm/detail/type_vec4.inl \
+ /usr/include/glm/ext/vector_bool4_precision.hpp \
+ /usr/include/glm/ext/vector_float4.hpp \
+ /usr/include/glm/ext/vector_float4_precision.hpp \
+ /usr/include/glm/ext/vector_double4.hpp \
+ /usr/include/glm/ext/vector_double4_precision.hpp \
+ /usr/include/glm/detail/setup.hpp /usr/include/glm/ext/vector_int4.hpp \
+ /usr/include/glm/ext/vector_int4_precision.hpp \
+ /usr/include/glm/ext/vector_uint4.hpp \
+ /usr/include/glm/ext/vector_uint4_precision.hpp \
+ /usr/include/glm/mat2x2.hpp /usr/include/glm/ext/matrix_double2x2.hpp \
+ /usr/include/glm/detail/type_mat2x2.hpp \
+ /usr/include/glm/detail/type_mat2x2.inl /usr/include/glm/matrix.hpp \
+ /usr/include/glm/mat2x3.hpp /usr/include/glm/ext/matrix_double2x3.hpp \
+ /usr/include/glm/detail/type_mat2x3.hpp \
+ /usr/include/glm/detail/type_mat2x3.inl \
+ /usr/include/glm/ext/matrix_double2x3_precision.hpp \
+ /usr/include/glm/ext/matrix_float2x3.hpp \
+ /usr/include/glm/ext/matrix_float2x3_precision.hpp \
+ /usr/include/glm/mat2x4.hpp /usr/include/glm/ext/matrix_double2x4.hpp \
+ /usr/include/glm/detail/type_mat2x4.hpp \
+ /usr/include/glm/detail/type_mat2x4.inl \
+ /usr/include/glm/ext/matrix_double2x4_precision.hpp \
+ /usr/include/glm/ext/matrix_float2x4.hpp \
+ /usr/include/glm/ext/matrix_float2x4_precision.hpp \
+ /usr/include/glm/mat3x2.hpp /usr/include/glm/ext/matrix_double3x2.hpp \
+ /usr/include/glm/detail/type_mat3x2.hpp \
+ /usr/include/glm/detail/type_mat3x2.inl \
+ /usr/include/glm/ext/matrix_double3x2_precision.hpp \
+ /usr/include/glm/ext/matrix_float3x2.hpp \
+ /usr/include/glm/ext/matrix_float3x2_precision.hpp \
+ /usr/include/glm/mat3x3.hpp /usr/include/glm/ext/matrix_double3x3.hpp \
+ /usr/include/glm/detail/type_mat3x3.hpp \
+ /usr/include/glm/detail/type_mat3x3.inl \
+ /usr/include/glm/ext/matrix_double3x3_precision.hpp \
+ /usr/include/glm/ext/matrix_float3x3.hpp \
+ /usr/include/glm/ext/matrix_float3x3_precision.hpp \
+ /usr/include/glm/mat3x4.hpp /usr/include/glm/ext/matrix_double3x4.hpp \
+ /usr/include/glm/detail/type_mat3x4.hpp \
+ /usr/include/glm/detail/type_mat3x4.inl \
+ /usr/include/glm/ext/matrix_double3x4_precision.hpp \
+ /usr/include/glm/ext/matrix_float3x4.hpp \
+ /usr/include/glm/ext/matrix_float3x4_precision.hpp \
+ /usr/include/glm/mat4x2.hpp /usr/include/glm/ext/matrix_double4x2.hpp \
+ /usr/include/glm/detail/type_mat4x2.hpp \
+ /usr/include/glm/detail/type_mat4x2.inl \
+ /usr/include/glm/ext/matrix_double4x2_precision.hpp \
+ /usr/include/glm/ext/matrix_float4x2.hpp \
+ /usr/include/glm/ext/matrix_float4x2_precision.hpp \
+ /usr/include/glm/mat4x3.hpp /usr/include/glm/ext/matrix_double4x3.hpp \
+ /usr/include/glm/detail/type_mat4x3.hpp \
+ /usr/include/glm/detail/type_mat4x3.inl \
+ /usr/include/glm/ext/matrix_double4x3_precision.hpp \
+ /usr/include/glm/ext/matrix_float4x3.hpp \
+ /usr/include/glm/ext/matrix_float4x3_precision.hpp \
+ /usr/include/glm/mat4x4.hpp /usr/include/glm/ext/matrix_double4x4.hpp \
+ /usr/include/glm/detail/type_mat4x4.hpp \
+ /usr/include/glm/detail/type_mat4x4.inl \
+ /usr/include/glm/ext/matrix_double4x4_precision.hpp \
+ /usr/include/glm/ext/matrix_float4x4.hpp \
+ /usr/include/glm/ext/matrix_float4x4_precision.hpp \
+ /usr/include/glm/detail/func_matrix.inl /usr/include/glm/geometric.hpp \
+ /usr/include/glm/detail/func_geometric.inl \
+ /usr/include/glm/exponential.hpp /usr/include/glm/detail/type_vec1.hpp \
+ /usr/include/glm/detail/type_vec1.inl \
+ /usr/include/glm/detail/func_exponential.inl \
+ /usr/include/glm/vector_relational.hpp \
+ /usr/include/glm/detail/func_vector_relational.inl \
+ /usr/include/glm/detail/_vectorize.hpp /usr/include/glm/common.hpp \
+ /usr/include/glm/detail/func_common.inl \
+ /usr/include/glm/detail/compute_common.hpp \
+ /usr/include/glm/ext/matrix_double2x2_precision.hpp \
+ /usr/include/glm/ext/matrix_float2x2.hpp \
+ /usr/include/glm/ext/matrix_float2x2_precision.hpp \
+ /usr/include/glm/trigonometric.hpp \
+ /usr/include/glm/detail/func_trigonometric.inl \
+ /usr/include/glm/packing.hpp /usr/include/glm/detail/func_packing.inl \
+ /usr/include/glm/detail/type_half.hpp \
+ /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
+ /usr/include/glm/detail/func_integer.inl /usr/include/glm/gtc/random.hpp \
+ /usr/include/glm/ext/scalar_int_sized.hpp \
+ /usr/include/glm/ext/scalar_uint_sized.hpp \
+ /usr/include/glm/gtc/random.inl /usr/include/c++/9/cstdlib \
+ /usr/include/c++/9/ctime /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/timex.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+ /usr/include/GL/glew.h /usr/include/GL/glu.h /usr/include/GL/gl.h
+
+/usr/include/stdc-predef.h:
+
+/usr/include/c++/9/vector:
+
+/usr/include/c++/9/bits/stl_algobase.h:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h:
+
+/usr/include/c++/9/bits/functexcept.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h:
+/usr/include/c++/9/bits/exception_defines.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/runetype.h:
+/usr/include/c++/9/bits/cpp_type_traits.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__bit_reference:
+/usr/include/c++/9/ext/type_traits.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/bit:
+/usr/include/c++/9/ext/numeric_traits.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/limits:
+/usr/include/c++/9/bits/stl_pair.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits:
+/usr/include/c++/9/bits/move.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstddef:
+/usr/include/c++/9/bits/concept_check.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__cxx_version:
+/usr/include/c++/9/type_traits:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/stddef.h:
+/usr/include/c++/9/bits/stl_iterator_base_types.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/__stddef_max_align_t.h:
+/usr/include/c++/9/bits/stl_iterator_base_funcs.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__nullptr:
+/usr/include/c++/9/debug/assertions.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__undef_macros:
+/usr/include/c++/9/bits/stl_iterator.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__debug:
+/usr/include/c++/9/bits/ptr_traits.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/algorithm:
+/usr/include/c++/9/debug/debug.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/initializer_list:
+/usr/include/c++/9/bits/predefined_ops.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstring:
+/usr/include/c++/9/bits/allocator.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string.h:
+/usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/string.h:
+/usr/include/c++/9/ext/new_allocator.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rsize_t.h:
+/usr/include/c++/9/new:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_errno_t.h:
+/usr/include/c++/9/exception:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/strings.h:
+/usr/include/c++/9/bits/exception.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/utility:
+/usr/include/c++/9/bits/exception_ptr.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tuple:
+/usr/include/c++/9/bits/cxxabi_init_exception.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdint:
+/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stdint.h:
+/usr/include/c++/9/typeinfo:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/stdint.h:
+/usr/include/c++/9/bits/hash_bytes.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdint.h:
+/usr/include/c++/9/bits/nested_exception.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint8_t.h:
+/usr/include/c++/9/bits/memoryfwd.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint16_t.h:
+/usr/include/c++/9/bits/stl_construct.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint32_t.h:
+/usr/include/c++/9/ext/alloc_traits.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uint64_t.h:
+/usr/include/c++/9/bits/alloc_traits.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_intmax_t.h:
+/usr/include/c++/9/bits/stl_uninitialized.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uintmax_t.h:
+/usr/include/c++/9/bits/stl_vector.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:
+/usr/include/c++/9/initializer_list:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/typeinfo:
+/usr/include/c++/9/bits/stl_bvector.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/exception:
+/usr/include/c++/9/bits/functional_hash.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cstdlib:
+/usr/include/c++/9/bits/range_access.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stdlib.h:
+/usr/include/c++/9/bits/vector.tcc:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h:
+/usr/include/glm/glm.hpp:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/wait.h:
+/usr/include/glm/detail/_fixes.hpp:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_pid_t.h:
+/usr/include/c++/9/cmath:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_id_t.h:
+/usr/include/math.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/signal.h:
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/appleapiopts.h:
+/usr/include/x86_64-linux-gnu/bits/types.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/signal.h:
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/signal.h:
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/_mcontext.h:
+/usr/include/x86_64-linux-gnu/bits/time64.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/_mcontext.h:
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/machine/_structs.h:
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/i386/_structs.h:
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigaltstack.h:
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ucontext.h:
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h:
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uid_t.h:
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/resource.h:
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timeval.h:
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/endian.h:
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/endian.h:
+/usr/include/x86_64-linux-gnu/bits/mathinline.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_endian.h:
+/usr/include/c++/9/bits/std_abs.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/_OSByteOrder.h:
+/usr/include/stdlib.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/i386/_OSByteOrder.h:
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/alloca.h:
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_malloc.h:
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h:
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h:
+/usr/include/x86_64-linux-gnu/sys/types.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/math.h:
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/math.h:
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/new:
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__functional_base:
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/tuple:
+/usr/include/endian.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/stdexcept:
+/usr/include/x86_64-linux-gnu/bits/endian.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/atomic:
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cassert:
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h:
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/functional:
+/usr/include/x86_64-linux-gnu/sys/select.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/climits:
+/usr/include/x86_64-linux-gnu/bits/select.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/limits.h:
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/limits.h:
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/limits.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/limits.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/limits.h:
+/usr/include/x86_64-linux-gnu/bits/select2.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/i386/_limits.h:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h:
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__split_buffer:
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
-/usr/local/include/glm/glm.hpp:
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
-/usr/local/include/glm/detail/_fixes.hpp:
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cmath:
+/usr/include/alloca.h:
 
-/usr/local/include/glm/detail/setup.hpp:
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
-/usr/local/include/glm/detail/../simd/platform.h:
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/cfloat:
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/float.h:
+/usr/include/glm/detail/setup.hpp:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include/float.h:
+/usr/include/c++/9/cassert:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/float.h:
+/usr/include/assert.h:
 
-/usr/local/include/glm/fwd.hpp:
+/usr/include/c++/9/cstddef:
 
-/usr/local/include/glm/detail/qualifier.hpp:
+/usr/include/glm/simd/platform.h:
 
-/usr/local/include/glm/vec2.hpp:
+/usr/include/c++/9/cstdint:
 
-/usr/local/include/glm/./ext/vector_bool2.hpp:
+/usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h:
 
-/usr/local/include/glm/./ext/../detail/type_vec2.hpp:
+/usr/include/stdint.h:
 
-/usr/local/include/glm/detail/type_vec2.inl:
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/usr/local/include/glm/detail/./compute_vector_relational.hpp:
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
-/usr/local/include/glm/./ext/vector_bool2_precision.hpp:
+/usr/include/c++/9/climits:
 
-/usr/local/include/glm/./ext/vector_float2.hpp:
+/usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h:
 
-/usr/local/include/glm/./ext/vector_float2_precision.hpp:
+/usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h:
 
-/usr/local/include/glm/./ext/vector_double2.hpp:
+/usr/include/limits.h:
 
-/usr/local/include/glm/./ext/vector_double2_precision.hpp:
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
-/usr/local/include/glm/./ext/vector_int2.hpp:
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
-/usr/local/include/glm/./ext/vector_int2_sized.hpp:
+/usr/include/linux/limits.h:
 
-/usr/local/include/glm/./ext/../ext/vector_int2.hpp:
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
-/usr/local/include/glm/./ext/../ext/scalar_int_sized.hpp:
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
-/usr/local/include/glm/./ext/../detail/setup.hpp:
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
-/usr/local/include/glm/./ext/vector_uint2.hpp:
+/usr/include/c++/9/cfloat:
 
-/usr/local/include/glm/./ext/vector_uint2_sized.hpp:
+/usr/lib/gcc/x86_64-linux-gnu/9/include/float.h:
 
-/usr/local/include/glm/./ext/../ext/vector_uint2.hpp:
+/usr/include/c++/9/limits:
 
-/usr/local/include/glm/./ext/../ext/scalar_uint_sized.hpp:
+/usr/include/glm/fwd.hpp:
 
-/usr/local/include/glm/vec3.hpp:
+/usr/include/glm/detail/qualifier.hpp:
 
-/usr/local/include/glm/./ext/vector_bool3.hpp:
+/usr/include/glm/detail/setup.hpp:
 
-/usr/local/include/glm/./ext/../detail/type_vec3.hpp:
+/usr/include/glm/vec2.hpp:
 
-/usr/local/include/glm/detail/type_vec3.inl:
+/usr/include/glm/ext/vector_bool2.hpp:
 
-/usr/local/include/glm/detail/compute_vector_relational.hpp:
+/usr/include/glm/detail/type_vec2.hpp:
 
-/usr/local/include/glm/./ext/vector_bool3_precision.hpp:
+/usr/include/glm/detail/type_vec2.inl:
 
-/usr/local/include/glm/./ext/vector_float3.hpp:
+/usr/include/glm/detail/compute_vector_relational.hpp:
 
-/usr/local/include/glm/./ext/vector_float3_precision.hpp:
+/usr/include/glm/ext/vector_bool2_precision.hpp:
 
-/usr/local/include/glm/./ext/vector_double3.hpp:
+/usr/include/glm/ext/vector_float2.hpp:
 
-/usr/local/include/glm/./ext/vector_double3_precision.hpp:
+/usr/include/glm/ext/vector_float2_precision.hpp:
 
-/usr/local/include/glm/./ext/vector_int3.hpp:
+/usr/include/glm/ext/vector_double2.hpp:
 
-/usr/local/include/glm/./ext/vector_int3_sized.hpp:
+/usr/include/glm/ext/vector_double2_precision.hpp:
 
-/usr/local/include/glm/./ext/../ext/vector_int3.hpp:
+/usr/include/glm/ext/vector_int2.hpp:
 
-/usr/local/include/glm/./ext/vector_uint3.hpp:
+/usr/include/glm/ext/vector_int2_precision.hpp:
 
-/usr/local/include/glm/./ext/vector_uint3_sized.hpp:
+/usr/include/glm/ext/vector_uint2.hpp:
 
-/usr/local/include/glm/./ext/../ext/vector_uint3.hpp:
+/usr/include/glm/ext/vector_uint2_precision.hpp:
 
-/usr/local/include/glm/vec4.hpp:
+/usr/include/glm/vec3.hpp:
 
-/usr/local/include/glm/./ext/vector_bool4.hpp:
+/usr/include/glm/ext/vector_bool3.hpp:
 
-/usr/local/include/glm/./ext/../detail/type_vec4.hpp:
+/usr/include/glm/detail/type_vec3.hpp:
 
-/usr/local/include/glm/detail/type_vec4.inl:
+/usr/include/glm/detail/type_vec3.inl:
 
-/usr/local/include/glm/./ext/vector_bool4_precision.hpp:
+/usr/include/glm/ext/vector_bool3_precision.hpp:
 
-/usr/local/include/glm/./ext/vector_float4.hpp:
+/usr/include/glm/ext/vector_float3.hpp:
 
-/usr/local/include/glm/./ext/vector_float4_precision.hpp:
+/usr/include/glm/ext/vector_float3_precision.hpp:
 
-/usr/local/include/glm/./ext/vector_double4.hpp:
+/usr/include/glm/ext/vector_double3.hpp:
 
-/usr/local/include/glm/./ext/vector_double4_precision.hpp:
+/usr/include/glm/ext/vector_double3_precision.hpp:
 
-/usr/local/include/glm/./ext/vector_int4.hpp:
+/usr/include/glm/ext/vector_int3.hpp:
 
-/usr/local/include/glm/./ext/vector_int4_sized.hpp:
+/usr/include/glm/ext/vector_int3_precision.hpp:
 
-/usr/local/include/glm/./ext/../ext/vector_int4.hpp:
+/usr/include/glm/ext/vector_uint3.hpp:
 
-/usr/local/include/glm/./ext/vector_uint4.hpp:
+/usr/include/glm/ext/vector_uint3_precision.hpp:
 
-/usr/local/include/glm/./ext/vector_uint4_sized.hpp:
+/usr/include/glm/vec4.hpp:
 
-/usr/local/include/glm/./ext/../ext/vector_uint4.hpp:
+/usr/include/glm/ext/vector_bool4.hpp:
 
-/usr/local/include/glm/mat2x2.hpp:
+/usr/include/glm/detail/type_vec4.hpp:
 
-/usr/local/include/glm/./ext/matrix_double2x2.hpp:
+/usr/include/glm/detail/type_vec4.inl:
 
-/usr/local/include/glm/./ext/../detail/type_mat2x2.hpp:
+/usr/include/glm/ext/vector_bool4_precision.hpp:
 
-/usr/local/include/glm/detail/type_vec2.hpp:
+/usr/include/glm/ext/vector_float4.hpp:
 
-/usr/local/include/glm/detail/type_mat2x2.inl:
+/usr/include/glm/ext/vector_float4_precision.hpp:
 
-/usr/local/include/glm/detail/../matrix.hpp:
+/usr/include/glm/ext/vector_double4.hpp:
 
-/usr/local/include/glm/mat2x3.hpp:
+/usr/include/glm/ext/vector_double4_precision.hpp:
 
-/usr/local/include/glm/./ext/matrix_double2x3.hpp:
+/usr/include/glm/detail/setup.hpp:
 
-/usr/local/include/glm/./ext/../detail/type_mat2x3.hpp:
+/usr/include/glm/ext/vector_int4.hpp:
 
-/usr/local/include/glm/detail/type_vec3.hpp:
+/usr/include/glm/ext/vector_int4_precision.hpp:
 
-/usr/local/include/glm/detail/type_mat2x3.inl:
+/usr/include/glm/ext/vector_uint4.hpp:
 
-/usr/local/include/glm/./ext/matrix_double2x3_precision.hpp:
+/usr/include/glm/ext/vector_uint4_precision.hpp:
 
-/usr/local/include/glm/./ext/matrix_float2x3.hpp:
+/usr/include/glm/mat2x2.hpp:
 
-/usr/local/include/glm/./ext/matrix_float2x3_precision.hpp:
+/usr/include/glm/ext/matrix_double2x2.hpp:
 
-/usr/local/include/glm/mat2x4.hpp:
+/usr/include/glm/detail/type_mat2x2.hpp:
 
-/usr/local/include/glm/./ext/matrix_double2x4.hpp:
+/usr/include/glm/detail/type_mat2x2.inl:
 
-/usr/local/include/glm/./ext/../detail/type_mat2x4.hpp:
+/usr/include/glm/matrix.hpp:
 
-/usr/local/include/glm/detail/type_vec4.hpp:
+/usr/include/glm/mat2x3.hpp:
 
-/usr/local/include/glm/detail/type_mat2x4.inl:
+/usr/include/glm/ext/matrix_double2x3.hpp:
 
-/usr/local/include/glm/./ext/matrix_double2x4_precision.hpp:
+/usr/include/glm/detail/type_mat2x3.hpp:
 
-/usr/local/include/glm/./ext/matrix_float2x4.hpp:
+/usr/include/glm/detail/type_mat2x3.inl:
 
-/usr/local/include/glm/./ext/matrix_float2x4_precision.hpp:
+/usr/include/glm/ext/matrix_double2x3_precision.hpp:
 
-/usr/local/include/glm/mat3x2.hpp:
+/usr/include/glm/ext/matrix_float2x3.hpp:
 
-/usr/local/include/glm/./ext/matrix_double3x2.hpp:
+/usr/include/glm/ext/matrix_float2x3_precision.hpp:
 
-/usr/local/include/glm/./ext/../detail/type_mat3x2.hpp:
+/usr/include/glm/mat2x4.hpp:
 
-/usr/local/include/glm/detail/type_mat3x2.inl:
+/usr/include/glm/ext/matrix_double2x4.hpp:
 
-/usr/local/include/glm/./ext/matrix_double3x2_precision.hpp:
+/usr/include/glm/detail/type_mat2x4.hpp:
 
-/usr/local/include/glm/./ext/matrix_float3x2.hpp:
+/usr/include/glm/detail/type_mat2x4.inl:
 
-/usr/local/include/glm/./ext/matrix_float3x2_precision.hpp:
+/usr/include/glm/ext/matrix_double2x4_precision.hpp:
 
-/usr/local/include/glm/mat3x3.hpp:
+/usr/include/glm/ext/matrix_float2x4.hpp:
 
-/usr/local/include/glm/./ext/matrix_double3x3.hpp:
+/usr/include/glm/ext/matrix_float2x4_precision.hpp:
 
-/usr/local/include/glm/./ext/../detail/type_mat3x3.hpp:
+/usr/include/glm/mat3x2.hpp:
 
-/usr/local/include/glm/detail/type_mat3x3.inl:
+/usr/include/glm/ext/matrix_double3x2.hpp:
 
-/usr/local/include/glm/./ext/matrix_double3x3_precision.hpp:
+/usr/include/glm/detail/type_mat3x2.hpp:
 
-/usr/local/include/glm/./ext/matrix_float3x3.hpp:
+/usr/include/glm/detail/type_mat3x2.inl:
 
-/usr/local/include/glm/./ext/matrix_float3x3_precision.hpp:
+/usr/include/glm/ext/matrix_double3x2_precision.hpp:
 
-/usr/local/include/glm/mat3x4.hpp:
+/usr/include/glm/ext/matrix_float3x2.hpp:
 
-/usr/local/include/glm/./ext/matrix_double3x4.hpp:
+/usr/include/glm/ext/matrix_float3x2_precision.hpp:
 
-/usr/local/include/glm/./ext/../detail/type_mat3x4.hpp:
+/usr/include/glm/mat3x3.hpp:
 
-/usr/local/include/glm/detail/type_mat3x4.inl:
+/usr/include/glm/ext/matrix_double3x3.hpp:
 
-/usr/local/include/glm/./ext/matrix_double3x4_precision.hpp:
+/usr/include/glm/detail/type_mat3x3.hpp:
 
-/usr/local/include/glm/./ext/matrix_float3x4.hpp:
+/usr/include/glm/detail/type_mat3x3.inl:
 
-/usr/local/include/glm/./ext/matrix_float3x4_precision.hpp:
+/usr/include/glm/ext/matrix_double3x3_precision.hpp:
 
-/usr/local/include/glm/mat4x2.hpp:
+/usr/include/glm/ext/matrix_float3x3.hpp:
 
-/usr/local/include/glm/./ext/matrix_double4x2.hpp:
+/usr/include/glm/ext/matrix_float3x3_precision.hpp:
 
-/usr/local/include/glm/./ext/../detail/type_mat4x2.hpp:
+/usr/include/glm/mat3x4.hpp:
 
-/usr/local/include/glm/detail/type_mat4x2.inl:
+/usr/include/glm/ext/matrix_double3x4.hpp:
 
-/usr/local/include/glm/./ext/matrix_double4x2_precision.hpp:
+/usr/include/glm/detail/type_mat3x4.hpp:
 
-/usr/local/include/glm/./ext/matrix_float4x2.hpp:
+/usr/include/glm/detail/type_mat3x4.inl:
 
-/usr/local/include/glm/./ext/matrix_float4x2_precision.hpp:
+/usr/include/glm/ext/matrix_double3x4_precision.hpp:
 
-/usr/local/include/glm/mat4x3.hpp:
+/usr/include/glm/ext/matrix_float3x4.hpp:
 
-/usr/local/include/glm/./ext/matrix_double4x3.hpp:
+/usr/include/glm/ext/matrix_float3x4_precision.hpp:
 
-/usr/local/include/glm/./ext/../detail/type_mat4x3.hpp:
+/usr/include/glm/mat4x2.hpp:
 
-/usr/local/include/glm/detail/type_mat4x3.inl:
+/usr/include/glm/ext/matrix_double4x2.hpp:
 
-/usr/local/include/glm/./ext/matrix_double4x3_precision.hpp:
+/usr/include/glm/detail/type_mat4x2.hpp:
 
-/usr/local/include/glm/./ext/matrix_float4x3.hpp:
+/usr/include/glm/detail/type_mat4x2.inl:
 
-/usr/local/include/glm/./ext/matrix_float4x3_precision.hpp:
+/usr/include/glm/ext/matrix_double4x2_precision.hpp:
 
-/usr/local/include/glm/mat4x4.hpp:
+/usr/include/glm/ext/matrix_float4x2.hpp:
 
-/usr/local/include/glm/./ext/matrix_double4x4.hpp:
+/usr/include/glm/ext/matrix_float4x2_precision.hpp:
 
-/usr/local/include/glm/./ext/../detail/type_mat4x4.hpp:
+/usr/include/glm/mat4x3.hpp:
 
-/usr/local/include/glm/detail/type_mat4x4.inl:
+/usr/include/glm/ext/matrix_double4x3.hpp:
 
-/usr/local/include/glm/./ext/matrix_double4x4_precision.hpp:
+/usr/include/glm/detail/type_mat4x3.hpp:
 
-/usr/local/include/glm/./ext/matrix_float4x4.hpp:
+/usr/include/glm/detail/type_mat4x3.inl:
 
-/usr/local/include/glm/./ext/matrix_float4x4_precision.hpp:
+/usr/include/glm/ext/matrix_double4x3_precision.hpp:
 
-/usr/local/include/glm/detail/func_matrix.inl:
+/usr/include/glm/ext/matrix_float4x3.hpp:
 
-/usr/local/include/glm/detail/../geometric.hpp:
+/usr/include/glm/ext/matrix_float4x3_precision.hpp:
 
-/usr/local/include/glm/detail/func_geometric.inl:
+/usr/include/glm/mat4x4.hpp:
 
-/usr/local/include/glm/detail/../exponential.hpp:
+/usr/include/glm/ext/matrix_double4x4.hpp:
 
-/usr/local/include/glm/detail/type_vec1.hpp:
+/usr/include/glm/detail/type_mat4x4.hpp:
 
-/usr/local/include/glm/detail/type_vec1.inl:
+/usr/include/glm/detail/type_mat4x4.inl:
 
-/usr/local/include/glm/detail/func_exponential.inl:
+/usr/include/glm/ext/matrix_double4x4_precision.hpp:
 
-/usr/local/include/glm/detail/../vector_relational.hpp:
+/usr/include/glm/ext/matrix_float4x4.hpp:
 
-/usr/local/include/glm/detail/func_vector_relational.inl:
+/usr/include/glm/ext/matrix_float4x4_precision.hpp:
 
-/usr/local/include/glm/detail/_vectorize.hpp:
+/usr/include/glm/detail/func_matrix.inl:
 
-/usr/local/include/glm/detail/../common.hpp:
+/usr/include/glm/geometric.hpp:
 
-/usr/local/include/glm/detail/func_common.inl:
+/usr/include/glm/detail/func_geometric.inl:
 
-/usr/local/include/glm/detail/compute_common.hpp:
+/usr/include/glm/exponential.hpp:
 
-/usr/local/include/glm/./ext/matrix_double2x2_precision.hpp:
+/usr/include/glm/detail/type_vec1.hpp:
 
-/usr/local/include/glm/./ext/matrix_float2x2.hpp:
+/usr/include/glm/detail/type_vec1.inl:
 
-/usr/local/include/glm/./ext/matrix_float2x2_precision.hpp:
+/usr/include/glm/detail/func_exponential.inl:
 
-/usr/local/include/glm/trigonometric.hpp:
+/usr/include/glm/vector_relational.hpp:
 
-/usr/local/include/glm/detail/func_trigonometric.inl:
+/usr/include/glm/detail/func_vector_relational.inl:
 
-/usr/local/include/glm/exponential.hpp:
+/usr/include/glm/detail/_vectorize.hpp:
 
-/usr/local/include/glm/common.hpp:
+/usr/include/glm/common.hpp:
 
-/usr/local/include/glm/packing.hpp:
+/usr/include/glm/detail/func_common.inl:
 
-/usr/local/include/glm/detail/func_packing.inl:
+/usr/include/glm/detail/compute_common.hpp:
 
-/usr/local/include/glm/detail/type_half.hpp:
+/usr/include/glm/ext/matrix_double2x2_precision.hpp:
 
-/usr/local/include/glm/detail/type_half.inl:
+/usr/include/glm/ext/matrix_float2x2.hpp:
 
-/usr/local/include/glm/geometric.hpp:
+/usr/include/glm/ext/matrix_float2x2_precision.hpp:
 
-/usr/local/include/glm/matrix.hpp:
+/usr/include/glm/trigonometric.hpp:
 
-/usr/local/include/glm/vector_relational.hpp:
+/usr/include/glm/detail/func_trigonometric.inl:
 
-/usr/local/include/glm/integer.hpp:
+/usr/include/glm/packing.hpp:
 
-/usr/local/include/glm/detail/func_integer.inl:
+/usr/include/glm/detail/func_packing.inl:
 
-/usr/local/include/glm/gtc/random.hpp:
+/usr/include/glm/detail/type_half.hpp:
 
-/usr/local/include/glm/gtc/../ext/scalar_int_sized.hpp:
+/usr/include/glm/detail/type_half.inl:
 
-/usr/local/include/glm/gtc/../ext/scalar_uint_sized.hpp:
+/usr/include/glm/integer.hpp:
 
-/usr/local/include/glm/gtc/../detail/qualifier.hpp:
+/usr/include/glm/detail/func_integer.inl:
 
-/usr/local/include/glm/gtc/random.inl:
+/usr/include/glm/gtc/random.hpp:
 
-/usr/local/include/glm/gtc/../geometric.hpp:
+/usr/include/glm/ext/scalar_int_sized.hpp:
 
-/usr/local/include/glm/gtc/../exponential.hpp:
+/usr/include/glm/ext/scalar_uint_sized.hpp:
 
-/usr/local/include/glm/gtc/../trigonometric.hpp:
+/usr/include/glm/gtc/random.inl:
 
-/usr/local/include/glm/gtc/../detail/type_vec1.hpp:
+/usr/include/c++/9/cstdlib:
 
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ctime:
+/usr/include/c++/9/ctime:
 
-/usr/local/include/GL/glew.h:
+/usr/include/time.h:
 
-/usr/local/include/OpenGL/glu.h:
+/usr/include/x86_64-linux-gnu/bits/time.h:
 
-/usr/local/include/OpenGL/OpenGLAvailability.h:
+/usr/include/x86_64-linux-gnu/bits/timex.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/os/availability.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
-/usr/local/include/OpenGL/gl.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/include/GL/glew.h:
+
+/usr/include/GL/glu.h:
+
+/usr/include/GL/gl.h:

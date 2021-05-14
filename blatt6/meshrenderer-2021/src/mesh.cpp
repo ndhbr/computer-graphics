@@ -2,7 +2,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/random.hpp>
 #include <GL/glew.h>
-#include <OpenGL/gl.h>
+#include <GL/gl.h>
 
 using namespace std;
 using namespace glm;

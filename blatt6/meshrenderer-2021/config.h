@@ -2,13 +2,13 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* foo */
-#define GLEW_INCLUDE_PATH "/usr/local/Cellar/glew/2.2.0_1/include"
+#define GLEW_INCLUDE_PATH "/usr/include"
 
 /* define if the compiler supports basic C++11 syntax */
 #define HAVE_CXX11 1
 
 /* Define to 1 if you have the `GL' library (-lGL). */
-/* #undef HAVE_LIBGL */
+#define HAVE_LIBGL 1
 
 /* Define to 1 if you have the `GLEW' library (-lGLEW). */
 #define HAVE_LIBGLEW 1
@@ -17,7 +17,7 @@
 #define HAVE_LIBGLFW 1
 
 /* foo */
-#define OPENGL_INCLUDE_PATH ""
+#define OPENGL_INCLUDE_PATH "/usr/include"
 
 /* Name of package */
 #define PACKAGE "meshrenderer"

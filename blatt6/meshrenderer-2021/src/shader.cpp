@@ -1,7 +1,7 @@
 #include "shader.h"
 
 #include <GL/glew.h>
-#include <OpenGL/gl.h>
+#include <GL/gl.h>
 #include <string>
 #include <iostream>
 #include <fstream>
