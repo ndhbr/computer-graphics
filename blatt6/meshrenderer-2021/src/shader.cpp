@@ -78,7 +78,7 @@ void load_shader() {
 
 	if (result != GL_TRUE) {
 		cerr << "Failed to compile shader 'shader.frag'" << endl;
-		cerr << get_log(frag_shader); 
+		// cerr << get_log(frag_shaderdiagnose); 
 		glDeleteShader(vert_shader);
 		glDeleteShader(frag_shader);
 		glDeleteProgram(shader_prog);
