@@ -13,16 +13,33 @@ using namespace glm;
 
 
 mat4 perspective_projection_transform(float fovy, float aspect, float n, float f) {
-	mat4 P(1);
 	// TODO: Aufgabe 1.4
 	// OpenGL Projektionsmatrix
+	float F = 1.0/tan(M_PI * fovy / 2 / 180.0);
+	mat4 P(	vec4(F/aspect, 0, 0, 0),
+			vec4(0, F, 0, 0),
+			vec4(0, 0, (n+f)/(n-f), -1),
+			vec4(0, 0, 2*n*f/(n-f), 0));
+
 	return P;
 }
 
 mat4 viewing_transform(const vec3 &pos, const vec3 &dir, const vec3 &up) {
-	mat4 V(1);
 	// TODO: Aufgabe 1.5
 	// OpenGL Viewingmatrix
+	vec3 w = normalize(-dir);
+	vec3 u = normalize(cross(up, w));
+	vec3 v = cross(w, u);
+	mat4 trans(	vec4(1, 0, 0, 0),
+			   	vec4(0, 1, 0, 0),
+				vec4(0, 0, 1, 0),
+				vec4(-pos.x, -pos.y, -pos.z, 1));
+	mat4 rot(	vec4(u.x, v.x, w.x, 0),
+				vec4(u.y, v.y, w.y, 0),
+				vec4(u.z, v.z, w.z, 0),
+				vec4(0, 0, 0, 1));
+	mat4 V = rot * trans;
+
 	return V;
 }
 
